@@ -1,5 +1,15 @@
 <?php
+//pdo
+//dbconnection
+require 'functions.php';
+$pdo = dbConnection();
 
+//fetch tasks
+$tasks = fetchTasks($pdo);
+require 'index1.view.php';
+//echo '<pre>';
+
+die();
 class Car3
 {
     protected $carName;
