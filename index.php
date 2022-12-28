@@ -1,5 +1,25 @@
 <?php
 
+class Car3
+{
+    protected $carName;
+    public function __construct($carName)
+    {
+        $this->carName = $carName;
+    }
+    protected function drive()
+    {
+        echo "$this->carName is drive";
+    }
+    public function getDrive()
+    {
+        $this->drive();
+    }
+}
+$car = new Car3('marcity');
+$car->getDrive();
+
+die();
 class Car2
 {
     protected function drive()
