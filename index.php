@@ -1,13 +1,10 @@
 <?php
-//pdo
-//dbconnection
-require 'functions.php';
-$pdo = dbConnection();
 
-//fetch tasks
-$tasks = fetchTasks($pdo);
+require './bootstrap.php';
+$users = $query->selectAll('users');
+
+dd($users);
 require 'index1.view.php';
-//echo '<pre>';
 
 die();
 class Car3
