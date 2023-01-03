@@ -1,10 +1,7 @@
 <?php
 
-require './bootstrap.php';
-$users = $query->selectAll('users');
-
-dd($users);
-require 'index1.view.php';
+require './core/bootstrap.php';
+require 'controllers/IndexController.php';
 
 die();
 class Car3

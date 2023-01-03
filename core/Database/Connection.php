@@ -2,13 +2,13 @@
 
 class Connection
 {
-    public static function make()
+    public static function make($config)
     {
         try {
             return $pdo = new PDO(
-                'mysql:host=localhost;dbname=tododatabase',
-                'root',
-                ''
+                "{$config['host']};dbname={$config['dbName']}",
+                $config['username'],
+                $config['password']
             );
         } catch (PDOException $e) {
             echo $e->getMessage();
